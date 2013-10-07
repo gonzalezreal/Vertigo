@@ -1,6 +1,8 @@
 # Vertigo
 **Vertigo** is a simple image viewer which includes a **custom view controller transition** that mimics the new **iOS 7 Photos app** image zoom transition effect.
+<p align="center" >
 <img src="https://raw.github.com/gonzalezreal/Vertigo/master/VertigoSample/VertigoSample.gif" alt="Image zoom transition" width="318" height="566" />
+</p>
 
 ## Installation
 ### From CocoaPods
