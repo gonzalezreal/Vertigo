@@ -1,7 +1,10 @@
 Pod::Spec.new do |s|
   s.name         = "Vertigo"
   s.version      = "0.1"
-  s.summary      = "Vertigo is a simple image viewer which includes a custom view controller transition that mimics the new iOS 7 Photos app image zoom transition effect."
+  s.summary      = "A simple image viewer which includes a custom transition that mimics the iOS 7 Photos app image zoom effect."
+  s.description  = <<-DESC
+                   **Vertigo** is a simple image viewer which includes a **custom view controller transition** that mimics the new **iOS 7 Photos app** image zoom transition effect.
+                   DESC
   s.homepage     = "https://github.com/gonzalezreal/Vertigo"
   s.screenshots  = "https://raw.github.com/gonzalezreal/Vertigo/master/VertigoSample/VertigoSample.gif"
   s.license      = 'MIT'
