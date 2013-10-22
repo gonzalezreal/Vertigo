@@ -5,6 +5,8 @@
 </p>
 
 ## Installation
+### Requirements
+Vertigo requires iOS 7 or greater.
 ### From CocoaPods
 Add `pod 'Vertigo'` to your Podfile.
 ### Manually
