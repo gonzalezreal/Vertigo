@@ -44,9 +44,6 @@
     
     [self.singleTapGestureRecognizer requireGestureRecognizerToFail:self.doubleTapGestureRecognizer];
     self.imageView.image = self.image;
-    self.scrollView.delegate = self;
-    self.scrollView.bounces = YES;
-    self.scrollView.alwaysBounceVertical = YES;
 }
 
 - (BOOL)prefersStatusBarHidden {
