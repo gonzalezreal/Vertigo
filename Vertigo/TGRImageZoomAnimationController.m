@@ -71,6 +71,8 @@
     // Perform the transition using a spring motion effect
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     
+    self.referenceImageView.alpha = 0;
+    
     [UIView animateWithDuration:duration
                           delay:0
          usingSpringWithDamping:0.7
@@ -136,6 +138,7 @@
                          toViewController.view.alpha = 1;
                          transitionView.frame = transitionViewFinalFrame;
                      } completion:^(BOOL finished) {
+                         self.referenceImageView.alpha = 1;
                          [transitionView removeFromSuperview];
                          [transitionContext completeTransition:YES];
                      }];
