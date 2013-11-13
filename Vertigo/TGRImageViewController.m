@@ -56,10 +56,22 @@
     return self.imageView;
 }
 
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (self.scrollView.zoomScale == self.scrollView.minimumZoomScale) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+}
+
 #pragma mark - Private methods
 
 - (IBAction)handleSingleTap:(UITapGestureRecognizer *)tapGestureRecognizer {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if (self.scrollView.zoomScale == self.scrollView.minimumZoomScale) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    else {
+        // Zoom out
+        [self.scrollView zoomToRect:self.scrollView.bounds animated:YES];
+    }
 }
 
 - (IBAction)handleDoubleTap:(UITapGestureRecognizer *)tapGestureRecognizer {
