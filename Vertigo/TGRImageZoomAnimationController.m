@@ -87,6 +87,7 @@
                          
                          [transitionView removeFromSuperview];
                          [transitionContext.containerView addSubview:toViewController.view];
+						 toViewController.view.frame = finalFrame;
                          
                          [transitionContext completeTransition:YES];
                      }];
