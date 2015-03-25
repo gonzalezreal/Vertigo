@@ -22,7 +22,7 @@
 
 #import "TGRImageZoomAnimationController.h"
 #import "TGRImageViewController.h"
-#import "UIImage+AspectFit.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation TGRImageZoomAnimationController
 
@@ -66,7 +66,7 @@
     
     // Compute the final frame for the temporary view
     CGRect finalFrame = [transitionContext finalFrameForViewController:toViewController];
-    CGRect transitionViewFinalFrame = [self.referenceImageView.image tgr_aspectFitRectForSize:finalFrame.size];
+    CGRect transitionViewFinalFrame = AVMakeRectWithAspectRatioInsideRect(self.referenceImageView.image.size, finalFrame);
     
     // Perform the transition using a spring motion effect
     NSTimeInterval duration = [self transitionDuration:transitionContext];
@@ -106,7 +106,7 @@
     
     // Compute the initial frame for the temporary view based on the image view
     // of the TGRImageViewController
-    CGRect transitionViewInitialFrame = [fromViewController.imageView.image tgr_aspectFitRectForSize:fromViewController.imageView.bounds.size];
+    CGRect transitionViewInitialFrame = AVMakeRectWithAspectRatioInsideRect(fromViewController.imageView.image.size, fromViewController.imageView.bounds);
     transitionViewInitialFrame = [transitionContext.containerView convertRect:transitionViewInitialFrame
                                                                      fromView:fromViewController.imageView];
     

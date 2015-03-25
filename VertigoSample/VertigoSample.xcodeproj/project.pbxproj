@@ -24,7 +24,6 @@
 		99A9FE681802D76800074858 /* TGRImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A9FE621802D76800074858 /* TGRImageViewController.m */; };
 		99A9FE691802D76800074858 /* TGRImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99A9FE631802D76800074858 /* TGRImageViewController.xib */; };
 		99A9FE6A1802D76800074858 /* TGRImageZoomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A9FE651802D76800074858 /* TGRImageZoomAnimationController.m */; };
-		99A9FE6B1802D76800074858 /* UIImage+AspectFit.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A9FE671802D76800074858 /* UIImage+AspectFit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +61,6 @@
 		99A9FE631802D76800074858 /* TGRImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGRImageViewController.xib; sourceTree = "<group>"; };
 		99A9FE641802D76800074858 /* TGRImageZoomAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRImageZoomAnimationController.h; sourceTree = "<group>"; };
 		99A9FE651802D76800074858 /* TGRImageZoomAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRImageZoomAnimationController.m; sourceTree = "<group>"; };
-		99A9FE661802D76800074858 /* UIImage+AspectFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AspectFit.h"; sourceTree = "<group>"; };
-		99A9FE671802D76800074858 /* UIImage+AspectFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AspectFit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,8 +169,6 @@
 				99A9FE631802D76800074858 /* TGRImageViewController.xib */,
 				99A9FE641802D76800074858 /* TGRImageZoomAnimationController.h */,
 				99A9FE651802D76800074858 /* TGRImageZoomAnimationController.m */,
-				99A9FE661802D76800074858 /* UIImage+AspectFit.h */,
-				99A9FE671802D76800074858 /* UIImage+AspectFit.m */,
 			);
 			name = Vertigo;
 			path = ../Vertigo;
@@ -281,7 +276,6 @@
 				99A9FE6A1802D76800074858 /* TGRImageZoomAnimationController.m in Sources */,
 				99A9FE301802D6F100074858 /* TGRAppDelegate.m in Sources */,
 				99A9FE2C1802D6F100074858 /* main.m in Sources */,
-				99A9FE6B1802D76800074858 /* UIImage+AspectFit.m in Sources */,
 				99A9FE681802D76800074858 /* TGRImageViewController.m in Sources */,
 				99A9FE361802D6F100074858 /* TGRViewController.m in Sources */,
 			);
@@ -492,6 +486,7 @@
 				99A9FE501802D6F100074858 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		99A9FE511802D6F100074858 /* Build configuration list for PBXNativeTarget "VertigoSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +495,7 @@
 				99A9FE531802D6F100074858 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
