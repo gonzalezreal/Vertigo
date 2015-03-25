@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/gonzalezreal/Vertigo.git", :tag => "0.1" }
   s.source_files = 'Vertigo'
   s.resources    = "Vertigo/TGRImageViewController.xib"
-  s.framework    = 'UIKit'
+  s.frameworks    = 'UIKit', 'AVFoundation'
   s.requires_arc = true
 end
