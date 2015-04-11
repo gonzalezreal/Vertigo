@@ -83,6 +83,7 @@
                         options:UIViewAnimationOptionCurveLinear
                      animations:^{
                          fromViewController.view.alpha = 0;
+                         transitionView.layer.cornerRadius = CGRectGetWidth(transitionView.frame) / 2; 
                          transitionView.frame = transitionViewFinalFrame;
                      }
                      completion:^(BOOL finished) {
