@@ -55,6 +55,9 @@
     TGRImageViewController *toViewController = (TGRImageViewController *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     NSAssert([toViewController isKindOfClass:TGRImageViewController.class], @"*** toViewController must be a TGRImageViewController!");
     
+    toViewController.view.frame = transitionContext.containerView.frame;
+    [toViewController.view setNeedsLayout];
+    
     // Create a temporary view for the zoom in transition and set the initial frame based
     // on the reference image view
     UIImageView *transitionView = [[UIImageView alloc] initWithImage:self.referenceImageView.image];
@@ -80,6 +83,7 @@
                         options:UIViewAnimationOptionCurveLinear
                      animations:^{
                          fromViewController.view.alpha = 0;
+                         transitionView.layer.cornerRadius = CGRectGetWidth(transitionView.frame) / 2; 
                          transitionView.frame = transitionViewFinalFrame;
                      }
                      completion:^(BOOL finished) {
