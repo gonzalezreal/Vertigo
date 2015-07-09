@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72695EDE1A711856003409FC /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72695EDD1A711856003409FC /* Launch Screen.xib */; };
 		99A9FE201802D6F100074858 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A9FE1F1802D6F100074858 /* Foundation.framework */; };
 		99A9FE221802D6F100074858 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A9FE211802D6F100074858 /* CoreGraphics.framework */; };
 		99A9FE241802D6F100074858 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A9FE231802D6F100074858 /* UIKit.framework */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		72695EDD1A711856003409FC /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		99A9FE1C1802D6F100074858 /* VertigoSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VertigoSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99A9FE1F1802D6F100074858 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		99A9FE211802D6F100074858 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,6 +129,7 @@
 				99A9FE2E1802D6F100074858 /* TGRAppDelegate.h */,
 				99A9FE2F1802D6F100074858 /* TGRAppDelegate.m */,
 				99A9FE311802D6F100074858 /* Main.storyboard */,
+				72695EDD1A711856003409FC /* Launch Screen.xib */,
 				99A9FE341802D6F100074858 /* TGRViewController.h */,
 				99A9FE351802D6F100074858 /* TGRViewController.m */,
 				99A9FE371802D6F100074858 /* Images.xcassets */,
@@ -260,6 +263,7 @@
 				99A9FE2A1802D6F100074858 /* InfoPlist.strings in Resources */,
 				99A9FE691802D76800074858 /* TGRImageViewController.xib in Resources */,
 				99A9FE331802D6F100074858 /* Main.storyboard in Resources */,
+				72695EDE1A711856003409FC /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +496,7 @@
 				99A9FE501802D6F100074858 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		99A9FE511802D6F100074858 /* Build configuration list for PBXNativeTarget "VertigoSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +505,7 @@
 				99A9FE531802D6F100074858 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
