@@ -29,7 +29,13 @@
 // (zoom out) of the transition.
 @property (weak, nonatomic, readonly) UIImageView *referenceImageView;
 
+// The frame of the referenceImageView, relative to source controller's view
+@property (assign, nonatomic, readonly) CGRect refrenceImageViewFinalFrame;
+
 // Initializes the receiver with the specified reference image view.
 - (id)initWithReferenceImageView:(UIImageView *)referenceImageView;
+
+// Initializes the receiver with the specified reference image view, and specified image view frame relative to source controller's view
+- (id)initWithReferenceImageView:(UIImageView *)referenceImageView refrenceImageViewFinalFrame:(CGRect)refrenceImageViewFinalFrame;
 
 @end
