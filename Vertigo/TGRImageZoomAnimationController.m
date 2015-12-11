@@ -27,9 +27,14 @@
 @implementation TGRImageZoomAnimationController
 
 - (id)initWithReferenceImageView:(UIImageView *)referenceImageView {
+    return [self initWithReferenceImageView:referenceImageView refrenceImageViewFinalFrame:CGRectZero];
+}
+
+- (id)initWithReferenceImageView:(UIImageView *)referenceImageView refrenceImageViewFinalFrame:(CGRect)refrenceImageViewFinalFrame {
     if (self = [super init]) {
         NSAssert(referenceImageView.contentMode == UIViewContentModeScaleAspectFill, @"*** referenceImageView must have a UIViewContentModeScaleAspectFill contentMode!");
         _referenceImageView = referenceImageView;
+        _refrenceImageViewFinalFrame = refrenceImageViewFinalFrame;
     }
     return self;
 }
@@ -112,8 +117,14 @@
     
     // Compute the final frame for the temporary view based on the reference
     // image view
-    CGRect transitionViewFinalFrame = [transitionContext.containerView convertRect:self.referenceImageView.bounds
-                                                                          fromView:self.referenceImageView];
+    CGRect transitionViewFinalFrame;
+    if (CGRectEqualToRect(self.refrenceImageViewFinalFrame, CGRectZero)) {
+        transitionViewFinalFrame = [transitionContext.containerView convertRect:self.referenceImageView.bounds
+                                                                       fromView:self.referenceImageView];
+    }
+    else {
+        transitionViewFinalFrame = self.refrenceImageViewFinalFrame;
+    }
     
     if (UIApplication.sharedApplication.isStatusBarHidden && ![toViewController prefersStatusBarHidden]) {
         transitionViewFinalFrame = CGRectOffset(transitionViewFinalFrame, 0, 20);
